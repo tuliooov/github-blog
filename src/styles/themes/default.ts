@@ -16,7 +16,7 @@ export const themeBlack = {
   'red-500': '#AB222E',
   'red-700': '#7A1921',
   background: '#071422',
-  'background-header': '#0B1B2B',
+  'background-header': '#162F49',
   'backgorund-card': '#0B1B2B',
 } as const
 

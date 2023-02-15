@@ -1,8 +1,9 @@
-export const HomePage = () => {
+import { Profile } from '../../components/Profile'
 
-    return (
-        <div>
-            home
-        </div>
-    )
+export const HomePage = () => {
+  return (
+    <div>
+      <Profile />
+    </div>
+  )
 }

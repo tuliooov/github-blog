@@ -1,21 +1,21 @@
-import { ActionsDiv, HeaderContainer, NewTransactionButton } from './styles'
+import { Effects, HeaderContainer } from './styles'
 
+import effectRight from '../../assets/effect-right.svg'
+import effectLeft from '../../assets/effect-left.svg'
 import logo from '../../assets/logo.svg'
-import { Moon, Sun } from 'phosphor-react'
 
-interface HeaderProps {
-  handleChangeTheme: () => void
-  theme: 'black' | 'white'
-}
-
-export function Header({ handleChangeTheme, theme }: HeaderProps) {
+export function Header() {
   return (
     <HeaderContainer>
-      <ActionsDiv>
-        <NewTransactionButton type="button" onClick={handleChangeTheme}>
-          {theme === 'black' ? <Sun size={24} /> : <Moon size={24} />}
-        </NewTransactionButton>
-      </ActionsDiv>
+      <Effects>
+        <div>
+          <img src={effectLeft} alt="effect header left" />
+        </div>
+        <img src={logo} alt="logo github blog" />
+        <div>
+          <img src={effectRight} alt="effect header right" />
+        </div>
+      </Effects>
     </HeaderContainer>
   )
 }
