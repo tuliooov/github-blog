@@ -5,6 +5,13 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${(props) => props.theme['link-500']};
   }
 
   ::-webkit-scrollbar {
@@ -33,7 +40,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background: ${(props) => props.theme.background};
-    color: ${(props) => props.theme['text-100']};
+    color: ${(props) => props.theme['text-700']};
     -webkit-font-smoothing: antialiased;
   }
 

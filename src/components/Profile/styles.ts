@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const ProfileContainer = styled.div`
   display: flex;
   gap: 1rem;
-  background: ${(props) => props.theme['backgorund-card']};
+  background: ${(props) => props.theme['background-card']};
   position: relative;
   top: -4rem;
   padding: 2rem;
@@ -13,6 +13,8 @@ export const ProfileContainer = styled.div`
 export const Avatar = styled.div`
   img {
     border-radius: 1rem;
+    height: 150px;
+    width: 150px;
   }
 `
 
@@ -34,11 +36,33 @@ export const ProfileInfo = styled.div`
 export const Name = styled.div`
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
+  p {
+    font-size: 1.5rem;
+  }
+  a {
+    display: flex;
+    gap: 0.25rem;
+    text-align: center;
+    font-size: 0.75rem;
+  }
 `
 
-export const Description = styled.div``
+export const Description = styled.div`
+  color: ${({ theme }) => theme['text-300']};
+`
 
 export const Details = styled.div`
+  color: ${({ theme }) => theme['text-300']};
   display: flex;
   gap: 1rem;
+  span {
+    svg {
+      color: ${({ theme }) => theme['text-300']};
+    }
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 0.25rem;
+  }
 `

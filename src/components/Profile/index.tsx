@@ -8,32 +8,45 @@ import {
   ProfileInfo,
 } from './styles'
 
-import avatar from '../../assets/avatar.svg'
+import { FiExternalLink } from 'react-icons/fi'
+import { BsGithub, BsFillBuildingFill, BsPeopleFill } from 'react-icons/bs'
 
-export function Profile() {
+import { IProfile } from '../../pages/Home'
+
+interface ProfileProps {
+  profile: IProfile
+}
+
+export function Profile({
+  profile: { avatar_url: avatarUrl, name, bio, login, company, followers },
+}: ProfileProps) {
   return (
     <ProfileContainer>
       <Avatar>
-        <img src={avatar} alt="" />
+        <img src={avatarUrl} alt={`picture ${name}`} />
       </Avatar>
       <Infos>
         <ProfileInfo>
           <Name>
-            <p>Cameron Williamson</p>
-            <a href="">githubpp</a>
+            <p>{name}</p>
+            <a href="">
+              GITHUB <FiExternalLink size={12} />
+            </a>
           </Name>
           <Description>
-            <p>
-              Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu
-              viverra massa quam dignissim aenean malesuada suscipit. Nunc,
-              volutpat pulvinar vel mass.
-            </p>
+            <p>{bio}</p>
           </Description>
         </ProfileInfo>
         <Details>
-          <span>cameronwll</span>
-          <span>Rocketseat</span>
-          <span>32 seguidores</span>
+          <span>
+            <BsGithub /> {login}
+          </span>
+          <span>
+            <BsFillBuildingFill /> {company}
+          </span>
+          <span>
+            <BsPeopleFill /> {followers} seguidores
+          </span>
         </Details>
       </Infos>
     </ProfileContainer>

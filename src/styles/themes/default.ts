@@ -1,23 +1,25 @@
 export const themeBlack = {
   white: '#fff',
-  'text-100': '#E1E1E6',
-  'text-300': '#C4C4CC',
+  'text-100': '#3A536B',
+  'text-200': '#7B96B2',
+  'text-300': '#AFC2D4',
   'text-400': '#8D8D99',
   'text-500': '#7C7C8A',
   'text-600': '#323238',
-  'text-700': '#29292E',
-  'background-card': '#323238',
+  'text-700': '#fff',
+  'background-card': '#112131',
   'background-800': '#202024',
   'background-900': '#121214',
+  'input-background': '#040F1A',
   'green-300': '#00B37E',
   'green-500': '#00875F',
   'green-700': '#015F43',
   'red-300': '#F75A68',
   'red-500': '#AB222E',
   'red-700': '#7A1921',
+  'link-500': '#3294F8',
   background: '#071422',
   'background-header': '#162F49',
-  'backgorund-card': '#0B1B2B',
 } as const
 
 export const themeWhite = {
@@ -27,6 +29,7 @@ export const themeWhite = {
   'text-500': '#8D8D99',
   'text-400': '#7C7C8A',
   'text-300': '#323238',
+  'text-200': '#7B96B2',
   'text-100': '#29292E',
   'green-700': '#00B37E',
   'green-500': '#00875F',
@@ -34,6 +37,7 @@ export const themeWhite = {
   'red-700': '#F75A68',
   'red-500': '#AB222E',
   'red-300': '#7A1921',
+  'link-500': '#3294F8',
 } as const
 
 export const defaultTheme = {
