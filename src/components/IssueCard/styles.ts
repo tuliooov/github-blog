@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const Root = styled.div`
+export const Root = styled.a`
+  text-decoration: none;
+  color: ${(props) => props.theme['text-700']};
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -10,5 +12,9 @@ export const Root = styled.div`
   div {
     display: flex;
     justify-content: space-between;
+  }
+  :hover {
+    cursor: pointer;
+    opacity: 0.8;
   }
 `

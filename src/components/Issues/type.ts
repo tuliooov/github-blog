@@ -32,16 +32,16 @@ export type IIssue = {
   labels: []
   state: string
   locked: false
-  assignee: null
+  assignee: unknown
   assignees: []
-  milestone: null
+  milestone: unknown
   comments: number
   created_at: string
   updated_at: string
-  closed_at: null
+  closed_at: unknown
   author_association: string
-  active_lock_reason: null
-  body: "Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.\r\n\r\n[Dynamic typing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#dynamic_typing)\r\nJavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:\r\n\r\nlet foo = 42;    // foo is now a number\r\nfoo     = 'bar'; // foo is now a string\r\nfoo     = true;  // foo is now a boolean"
+  active_lock_reason: unknown
+  body: string
   reactions: {
     url: string
     total_count: number
@@ -55,13 +55,13 @@ export type IIssue = {
     eyes: number
   }
   timeline_url: string
-  performed_via_github_app: null
-  state_reason: null
+  performed_via_github_app: unknown
+  state_reason: unknown
   score: number
 }
 
 export type ResponseIssue = {
-  total_count: 1
-  incomplete_results: false
+  total_count: number
+  incomplete_results: boolean
   items: IIssue[]
 }
