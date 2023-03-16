@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const Root = styled.a`
+export const Root = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme['text-700']};
   display: flex;

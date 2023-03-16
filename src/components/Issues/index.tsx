@@ -9,11 +9,11 @@ export function Issues() {
   const [search, setSearch] = useState<string>('')
   const [issues, setIssues] = useState<ResponseIssue>()
 
-  const debouncedValue = useDebounce<string>(search, 500)
-
   const handleChangeSearch = (event: ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value)
   }
+
+  const deboucedChangeSearch = useDebounce(handleChangeSearch, 500)
 
   const fetchGithubIssues = useCallback(async () => {
     try {
@@ -28,20 +28,20 @@ export function Issues() {
     } catch (error) {
       console.error(error)
     }
-  }, [])
+  }, [search])
 
   useEffect(() => {
     fetchGithubIssues()
-  }, [debouncedValue, fetchGithubIssues])
+  }, [fetchGithubIssues])
 
   if (!issues) {
-    return <p>loading...</p>
+    return <></>
   }
 
   return (
     <Root>
       <Filter
-        handleChangeSearch={handleChangeSearch}
+        handleChangeSearch={deboucedChangeSearch}
         totalCount={issues.total_count}
       />
       <ContentIssue>

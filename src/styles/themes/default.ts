@@ -1,4 +1,5 @@
 export const themeBlack = {
+  'base-post': '#112131',
   white: '#fff',
   'text-100': '#3A536B',
   'text-200': '#7B96B2',

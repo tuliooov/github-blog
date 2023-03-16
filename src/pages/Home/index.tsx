@@ -52,7 +52,7 @@ export const HomePage = () => {
   }, [])
 
   if (!profile) {
-    return <p>loading...</p>
+    return <></>
   }
 
   return (

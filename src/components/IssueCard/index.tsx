@@ -8,7 +8,11 @@ export function IssueCard({ item }: IssueCardProps) {
   const dateFormatted = new Date(item.updated_at).toLocaleDateString()
 
   return (
-    <Root>
+    <Root
+      to={{
+        pathname: `/issue/${item.number}`,
+      }}
+    >
       <div>
         <p>{item.title}</p>
         <span>{dateFormatted}</span>

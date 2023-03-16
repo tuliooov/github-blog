@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ProfileContainer = styled.div`
+export const IssueContainer = styled.div`
   display: flex;
   gap: 1rem;
   background: ${(props) => props.theme['background-card']};
@@ -8,15 +8,6 @@ export const ProfileContainer = styled.div`
   top: -4rem;
   padding: 2rem;
   border-radius: 0.85rem;
-  width: 100%;
-`
-
-export const Avatar = styled.div`
-  img {
-    border-radius: 1rem;
-    height: 150px;
-    width: 150px;
-  }
 `
 
 export const Infos = styled.div`
@@ -28,30 +19,35 @@ export const Infos = styled.div`
   width: 100%;
 `
 
-export const ProfileInfo = styled.div`
+export const IssueInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
+  width: 100%;
 `
 
 export const Name = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
   font-weight: bold;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    a {
+      display: flex;
+      gap: 0.25rem;
+      text-align: center;
+      font-size: 0.75rem;
+      align-items: center;
+    }
+  }
+
   p {
     font-size: 1.5rem;
   }
-  a {
-    display: flex;
-    gap: 0.25rem;
-    text-align: center;
-    font-size: 0.75rem;
-  }
-`
-
-export const Description = styled.div`
-  color: ${({ theme }) => theme['text-300']};
 `
 
 export const Details = styled.div`
