@@ -23,7 +23,7 @@ export function Issue({ issue }: IssueProps) {
               >
                 <FiChevronLeft size={18} /> VOLTAR
               </Link>
-              <a href={issue.html_url}>
+              <a href={issue.html_url} target="_blank" rel="noreferrer">
                 VER NO GITHUB <FiExternalLink size={18} />
               </a>
             </div>
@@ -35,7 +35,7 @@ export function Issue({ issue }: IssueProps) {
             <BsGithub /> {issue.user.login}
           </span>
           <span>
-            <BsFillBuildingFill /> {issue.updated_at}
+            <BsFillBuildingFill /> {new Date(issue.updated_at).toLocaleString()}
           </span>
           <span>
             <BsPeopleFill /> {issue.comments} seguidores

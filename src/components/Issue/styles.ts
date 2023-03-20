@@ -4,8 +4,6 @@ export const IssueContainer = styled.div`
   display: flex;
   gap: 1rem;
   background: ${(props) => props.theme['background-card']};
-  position: relative;
-  top: -4rem;
   padding: 2rem;
   border-radius: 0.85rem;
 `

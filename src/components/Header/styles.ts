@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
   display: flex;
-  background: ${(props) => props.theme['background-header']};
 `
 
 export const Effects = styled.div`

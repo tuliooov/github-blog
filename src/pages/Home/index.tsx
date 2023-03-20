@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Issues } from '../../components/Issues'
 import { Profile } from '../../components/Profile'
+import { Root } from './styles'
 
 export type IProfile = {
   avatar_url: string
@@ -56,9 +57,9 @@ export const HomePage = () => {
   }
 
   return (
-    <div>
+    <Root>
       <Profile profile={profile} />
       <Issues />
-    </div>
+    </Root>
   )
 }

@@ -4,8 +4,6 @@ export const ProfileContainer = styled.div`
   display: flex;
   gap: 1rem;
   background: ${(props) => props.theme['background-card']};
-  position: relative;
-  top: -4rem;
   padding: 2rem;
   border-radius: 0.85rem;
   width: 100%;
@@ -46,6 +44,7 @@ export const Name = styled.div`
     display: flex;
     gap: 0.25rem;
     text-align: center;
+    justify-content: center;
     font-size: 0.75rem;
   }
 `

@@ -18,7 +18,15 @@ interface ProfileProps {
 }
 
 export function Profile({
-  profile: { avatar_url: avatarUrl, name, bio, login, company, followers },
+  profile: {
+    avatar_url: avatarUrl,
+    name,
+    bio,
+    login,
+    company,
+    followers,
+    html_url: htmlUrl,
+  },
 }: ProfileProps) {
   return (
     <ProfileContainer>
@@ -29,7 +37,7 @@ export function Profile({
         <ProfileInfo>
           <Name>
             <p>{name}</p>
-            <a href="">
+            <a href={htmlUrl} target="_blank" rel="noreferrer">
               GITHUB <FiExternalLink size={12} />
             </a>
           </Name>
